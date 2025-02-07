@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - My Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <style>
+        body {
+            background-image: url("https://st4.depositphotos.com/2399299/22615/i/450/depositphotos_226157058-stock-photo-dark-grunge-texture-background-spotlight.jpg");
+        }
+
+        /* Profile photo animation */
+        .profile-photo {
+            animation: fadeInScale 1.5s ease-out;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-photo:hover {
+            transform: scale(1.05);
+        }
+
+        /* About section animations */
+        .about h2 {
+            animation: slideInFromLeft 1s ease-out;
+            position: relative;
+        }
+
+        .about p {
+            animation: fadeIn 1.5s ease-out;
+            position: relative;
+            line-height: 1.8;
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(20px);
+            opacity: 0;
+            animation: slideUpFade 1s ease-out forwards;
+            animation-delay: 0.5s;
+        }
+
+        /* Text highlight effect */
+        .highlight {
+            display: inline-block;
+            position: relative;
+            color: #fff;
+            animation: highlightText 1s ease-out forwards;
+            animation-delay: 1.5s;
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeInScale {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUpFade {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes highlightText {
+            0% {
+                background-position: -100% 0;
+            }
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+        /* Enhanced about section styling */
+        .about {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: rgba(255, 255, 255, 0.9);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Split text into animated sections */
+        .text-section {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideUpFade 1s ease-out forwards;
+        }
+
+        .text-section:nth-child(1) { animation-delay: 0.5s; }
+        .text-section:nth-child(2) { animation-delay: 0.7s; }
+        .text-section:nth-child(3) { animation-delay: 0.9s; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contacts.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about">
+            <img src="/personal photo.jpg" alt="soham Bag" class="profile-photo">
+            <h2>About Me</h2>
+            <div class="text-sections">
+                <p class="text-section">
+                    Hello! I'm <span class="highlight">soham bag</span> and currently I am a final year ECE undergraduate from New Horizon College of Engineering.
+                </p>
+                <p class="text-section">
+                    I like playing football and my favourite football player is <span class="highlight">Lionel Messi</span>.
+                </p>
+                <p class="text-section">
+                    I also like reading novels and I am a <span class="highlight">tech enthusiast</span>!
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 soham bag. All rights reserved.</p>
+    </footer>
+
+    <script src="portfolio.js"></script>
+</body>
+</html>
